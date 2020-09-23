@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#game-board {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.board-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.board-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 3.5px solid black;
+  font-size: 32px;
+  margin: 1px;
+  background: rgb(220, 220, 220);
+  color: rgb(220, 220, 220);
+}
+
+#game-slider,
+.board-field:hover {
+  cursor: pointer;
+}
+
+.field-hover {
+  opacity: 0.5;
+}
+
+.flag {
+  color: black !important;
+}
+
+.bomb {
+  background: rgb(220, 220, 220);
+  color: rgb(220, 220, 220);
+}
+
+.active,
+.active.bombs-0,
+.active.bombs-1,
+.active.bombs-2,
+.active.bombs-3,
+.active.bombs-4,
+.active.bomb {
+  border: 1px solid black;
+}
+
+.active.bombs-0 {
+  background: rgb(220, 220, 220);
+  color: rgb(220, 220, 220);
+}
+
+.active.bombs-1 {
+  color: blue;
+}
+
+.active.bombs-2 {
+  color: green;
+}
+
+.active.bombs-3 {
+  color: red;
+}
+
+.active.bombs-4 {
+  color: purple;
+}
+
+#game-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 30%;
+}
+
+#game-info button,
+div {
+  font-size: 24px;
+}
+
+#game-info button,
+#game-start {
+  margin-bottom: 5%;
+  outline: none;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+#game-info button:hover,
+#game-start:hover {
+  background: rgb(235, 235, 235);
+}
+
+.warning {
+  background: red;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.warning.active {
+  background: green;
+}
+
+.hint {
+  margin-top: 25%;
+  text-align: center;
+  outline: none;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.hint:hover {
+  background: rgb(235, 235, 235);
+}
+
+.active {
+  color: black;
+}
+
+.no-select {
+  user-select: none;
+}
+
+i,
+.no-click {
+  pointer-events: none;
+}
+
+.move-in {
+  margin-top: 3.5%;
+  margin-left: 3.5%;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+}
